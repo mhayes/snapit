@@ -1,0 +1,5 @@
+name: "My Personal Site"
+width: 1280
+urls:
+  - homepage: "https://markhay.es/"
+  - about: "https://markhay.es/about"

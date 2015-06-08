@@ -2,11 +2,22 @@
 
 require "bundler/setup"
 require "snapit"
+require "thor"
 
 class SnapitCLI < Thor
-  desc "hello"
+  desc "hello", "hello name"
   def hello
     puts "hello mark"
+  end
+
+  desc "capture", "capture SCRIPT_PATH"
+  def capture(script_path)
+    # root_path  = Pathname.new(File.absolute_path(File.join(File.dirname(__FILE__))))
+    root_path = Pathname.new(File.absolute_path("."))
+    # asset_path = Pathname.new(script_path)
+    puts root_path.inspect
+    # storage    = Snapit::Storage.new(root_path)
+    # res        = Snapit.run!(asset_path.join("screens.yml"), storage)
   end
 end
 
