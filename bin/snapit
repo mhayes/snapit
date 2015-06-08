@@ -1,0 +1,13 @@
+#!/usr/bin/env ruby
+
+require "bundler/setup"
+require "snapit"
+
+class SnapitCLI < Thor
+  desc "hello"
+  def hello
+    puts "hello mark"
+  end
+end
+
+SnapitCLI.start(ARGV)
