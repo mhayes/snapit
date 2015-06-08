@@ -1,39 +1,44 @@
-# Snapit
+# snapit
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/checkit`. To experiment with that code, run `bin/console` for an interactive prompt.
+Need a quick way to automatically take screenshots? Well then this tool is for you. This early version will allow you to take screenshots named in a particular fashion so you can upload them tools like [InVision](http://www.invisionapp.com/).
 
-TODO: Delete this and the text above, and describe your gem
+## usage
 
-## Installation
-
-Add this line to your application's Gemfile:
-
-```ruby
-gem 'checkit'
+```bash
+gem install snapit
 ```
 
-And then execute:
+This tool used `*.yml` files to automatically load up and take screenshots for you. So let's assume you have the following script:
 
-    $ bundle
+```example_script.yml
+name: 'My Personal Site'
+urls:
+  - homepage: "http://markhay.es/"
+  - about: "http://markhay.es/about"
+```
 
-Or install it yourself as:
+You can then run it like so:
 
-    $ gem install checkit
+```bash
+snapit capture example_script.yml
+```
 
-## Usage
+And you'll get a series of screenshots like so:
 
-TODO: Write usage instructions here
+```bash
+.
+├── example_script.yml
+└── snapit_captures
+    └── My_Personal_Site
+        ├── about.png
+        └── homepage.png
+```
 
-## Development
+## todo
 
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `bin/console` for an interactive prompt that will allow you to experiment.
+  - [ ] Integrate with tools like InVision
+  - [ ] Take screenshots at certain time intervals
 
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release` to create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+## license
 
-## Contributing
-
-1. Fork it ( https://github.com/[my-github-username]/checkit/fork )
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Add some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create a new Pull Request
+snapit is released under the [MIT License](http://opensource.org/licenses/MIT).

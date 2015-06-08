@@ -11,6 +11,7 @@ Gem::Specification.new do |spec|
 
   spec.summary       = %q{Automate your screen captures}
   spec.description   = %q{A simple way to take screenshots over and over again}
+  spec.licenses    = ['MIT']
   spec.homepage      = "https://github.com/mhayes/snapit"
 
   # Prevent pushing this gem to RubyGems.org by setting 'allowed_push_host', or

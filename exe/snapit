@@ -12,12 +12,11 @@ class SnapitCLI < Thor
 
   desc "capture", "capture SCRIPT_PATH"
   def capture(script_path)
-    # root_path  = Pathname.new(File.absolute_path(File.join(File.dirname(__FILE__))))
     root_path = Pathname.new(File.absolute_path("."))
-    # asset_path = Pathname.new(script_path)
-    puts root_path.inspect
-    # storage    = Snapit::Storage.new(root_path)
-    # res        = Snapit.run!(asset_path.join("screens.yml"), storage)
+    asset_path = Pathname.new(File.absolute_path(script_path))
+    storage    = Snapit::Storage.new(root_path)
+    Snapit.run!(asset_path, storage)
+    say_status "DONE", "Results added to #{storage.output_path.to_s}"
   end
 end
 
