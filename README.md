@@ -1,5 +1,7 @@
 # snapit
 
+[![Build Status](https://travis-ci.org/mhayes/snapit.svg?branch=master)](https://travis-ci.org/mhayes/snapit)
+
 Need a quick way to automatically take screenshots? Well then this tool is for you. This early version will allow you to take screenshots named in a particular fashion so you can upload them tools like [InVision](http://www.invisionapp.com/).
 
 ## usage
@@ -37,7 +39,7 @@ And you'll get a series of screenshots like so:
 ## todo
 
   - [ ] Integrate with tools like InVision
-  - [ ] Take screenshots at certain time intervals
+  - [ ] Take screenshots at certain time intervals (i.e. to capture phases of an animation)
 
 ## license
 
